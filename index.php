@@ -15,7 +15,7 @@ require_once 'files/crud.php';
         <div class="container">
             <div class="row align-items-center height">
                 <div class="col headerss">
-                    <h1 class="text-danger font-weight-bold text-uppercase font-italic">
+                    <h1 class="text-danger font-weight-bold text-center align-items-start  text-uppercase font-italic" style="margin-bottom:120px;">
                         <strong>Projecto</strong>
                         <small class="text-light">Escolar</small>
                     </h1>
@@ -35,7 +35,7 @@ require_once 'files/crud.php';
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 height">
-                <div class="card card-body bg-secondary">
+                <div class="card card-body bg-warning">
                     <div class="card-title text-center text-white">
                         <h2 class="text-capitalize">Estudantes</h2>
                         <p>Cadastro</p>
@@ -68,7 +68,7 @@ require_once 'files/crud.php';
                     </form>
                 </div>
             </div>
-            <div class="col-12 col-md-6 height" style="background-image: url(./dist/img/fundoHeader.jpg);">
+            <div class="col-12 col-md-6 height" style="background-image: url(./dist/img/estudantes2.jpg); background-size:cover;background-repeat:no-repeat; background-position:10%,center;">
             </div>
         </div>
         </div>
