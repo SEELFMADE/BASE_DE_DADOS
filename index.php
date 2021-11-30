@@ -7,6 +7,7 @@ require_once 'files/crud.php';
 <meta charset="UTF-8">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/nosso.css">
+    <link rel="stylesheet" href="dist/fontawesome/css/all.min.css">
     <title>Projecto</title>
 </head>
 <body>   
@@ -31,7 +32,7 @@ require_once 'files/crud.php';
     </section>
 
     <!-- CADASTRO -->
-    <section class="py-5 bg-light" id="cadastro">
+    <section class="py-5 bg-white" id="cadastro">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 height">
@@ -124,6 +125,34 @@ require_once 'files/crud.php';
         </div>
         </div>
     </div>
+</section>
+
+<section class="py-5 bg-warning">
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+        <a href="https://free.facebook.com/profile.php?id=100063619845043">
+               <i class="fab fa-facebook fa-2x"></i>
+            </a>
+       </div>
+       <div class="col-3">
+             <a href="https://www.gmail.com/">
+               <i class="fab fa-google-plus-g fa-2x"></i>
+            </a>
+       </div>
+       <div class="col-3">
+            <a href="https://www.twitter.com">
+               <i class="fab fa-twitter fa-2x"></i>
+            </a>
+       </div>
+       <div class="col-3">
+            <a href="https://www.linkedin.com">
+               <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+       </div>
+
+     </div>
+     </div>
 </section>
 </body>
 </html>
