@@ -37,8 +37,7 @@ require_once 'files/crud.php';
             <div class="col-12 col-md-6 height">
                 <div class="card card-body bg-secondary">
                     <div class="card-title text-center text-white">
-                        <h2 class="text-capitalize">Estu
-                            dantes</h2>
+                        <h2 class="text-capitalize">Estudantes</h2>
                         <p>Cadastro</p>
                     </div>
                     <form action="files/crud.php" method="POST">
