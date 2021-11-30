@@ -1,0 +1,16 @@
+.height-80{
+    min-height: 80vh;
+}
+.height{
+    min-height: 100vh;
+}
+.headers{
+    background: linear-gradient(to bottom,rgba(8, 8, 8, 0.137),rgba(31, 30, 29, 0.815)),url(../img/fundoHeader.jpg);
+   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: brown;
+
+
+
+}
