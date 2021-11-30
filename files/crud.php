@@ -1,11 +1,11 @@
 <?php
+//IMPORTAR CONEXÃO
 include "conexao.class.php";
-
+//IMPORTAR DOMPDF
 require_once "dompdf/autoload.inc.php";
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
-
-
+//INSTANCIAR A CLASSE DE CONEXAO
 $conect=new Conexao();
 $conect-> openConnection();
 
@@ -16,6 +16,7 @@ $turma='';
 $ano='';
 $id='';
 
+//SALVAR UM ALUNO
 if(isset($_POST["salvar"])){
     $nome=$_POST['nome'];
     $bi=$_POST['bi'];
@@ -25,7 +26,7 @@ if(isset($_POST["salvar"])){
     $deu=mysqli_query($conect->conexao,$query) or die("Erro");
     header("Location: ../index.php");
 
-}else if(isset($_POST["actualizar"])){
+}else if(isset($_POST["actualizar"])){ //ACTUALIZAR UM ALUNO
     $id=$_POST['id'];
     $nome=$_POST['nome'];
     $bi=$_POST['bi'];
@@ -35,14 +36,14 @@ if(isset($_POST["salvar"])){
     $deu=mysqli_query($conect->conexao,$query) or die(0);
 
     header("Location: ../index.php");
-}else if(isset($_GET["idUserDelete"])){
+}else if(isset($_GET["idUserDelete"])){ //APAGAR UM ALUNO
     $id=$_GET["idUserDelete"];
       
     $query="delete from tbAluno where id='$id'";
     $deu=mysqli_query($conect->conexao,$query) or die("Erro");
     header("Location: index.php");
 
-}else if(isset($_GET["editarUser"])){
+}else if(isset($_GET["editarUser"])){ //EDITAR ALUNO
     $id=$_GET["editarUser"];
       
    $query="select * from tbAluno where id='$id'";
@@ -57,7 +58,7 @@ if(isset($_POST["salvar"])){
         $ano=$linha['Ano'];
         $actualiza=false;
     }
- }else if(isset($_GET["pdf"])){
+ }else if(isset($_GET["pdf"])){ //GERAR PDF
 
     $consulta="SELECT Id,Bi,Turma,Nome,Ano FROM TBALUNO";
     $registros=mysqli_query($conect->conexao,$consulta);
