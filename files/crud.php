@@ -40,7 +40,7 @@ if(isset($_POST["salvar"])){
       
     $query="delete from tbAluno where id='$id'";
     $deu=mysqli_query($conect->conexao,$query) or die("Erro");
-    header("Location: ../index.php");
+    header("Location: index.php");
 
 }else if(isset($_GET["editarUser"])){
     $id=$_GET["editarUser"];
