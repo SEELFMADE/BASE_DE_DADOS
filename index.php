@@ -10,6 +10,7 @@ require_once 'files/crud.php';
     <title>Projecto</title>
 </head>
 <body>   
+    <!-- HEADER -->
 <section class="py-5 bg-success headers">
         <div class="container">
             <div class="row align-items-center height">
@@ -29,7 +30,6 @@ require_once 'files/crud.php';
         </div>
     </section>
 
-    
     <!-- CADASTRO -->
     <section class="py-5 bg-light" id="cadastro">
     <div class="container">
@@ -74,5 +74,57 @@ require_once 'files/crud.php';
         </div>
         </div>
         </section>
+
+    <!-- ALUNOS -->
+        <section class="py-5 bg-light" id="alunos">  
+            <div class="container">
+        <div class="row">
+        <div class="col-12">
+                <h2 class="display-4 text-muted">Alunos</h2>
+         </div>
+        <div class="col-12 my-3">
+                <table class="table">
+                    <thead>
+                        <tr class="bg-primary text-light">
+                            <th scope="col">ID</th>
+                            <th scope="col" class="text-center">Nome</th>
+                            <th scope="col" class="text-center">BI</th>
+                            <th scope="col" class="text-center">Turma</th>
+                            <th scope="col" class="text-center">Ano</th>
+                            <th scope="col" class="text-center">Opcoes</th>
+                         </tr>
+                    </thead>
+                    <tbody>     
+                        <?php
+                        $consulta="SELECT Id,Bi,Turma,Nome,Ano FROM TBALUNO";
+                        $registros=mysqli_query($conect->conexao,$consulta);
+                        while($linhas = mysqli_fetch_assoc($registros)){
+                            ?>
+                            <tr class="text-center">
+                            <th scope="row"><?php echo $linhas['Id']?></th>
+                            <th><?php echo $linhas['Nome']?></th>
+                            <th><?php echo $linhas['Bi']?></th>
+                            <th><?php echo $linhas['Turma']?></th>
+                            <th><?php echo $linhas['Ano']?></th>
+                            <th>
+                                <a class="text-primary btn btn-info text-white" style="cursor: pointer;" 
+                                href="index.php?idUserDelete=<?php echo $linhas['Id']?>">Apagar</a>
+                                <a class="text-primary btn btn-danger text-white" style="cursor: pointer; " 
+                                href="index.php?editarUser=<?php echo $linhas['Id']?>">Alterar</a>
+                            </th>
+                        </tr>   
+                        <?php
+                        }
+                        ?>
+             
+                    </tbody>
+                </table>
+            </div>
+        <div class="col-12">
+            <a class="btn btn-warning" href="index.php?pdf=true">Gerar pdf</a>
+        </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
