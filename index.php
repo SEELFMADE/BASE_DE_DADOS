@@ -127,6 +127,7 @@ require_once 'files/crud.php';
     </div>
 </section>
 
+    <!-- FOOTER -->
 <section class="py-5 bg-warning">
 <div class="container">
     <div class="row">
